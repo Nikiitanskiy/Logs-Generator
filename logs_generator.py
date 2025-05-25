@@ -7,7 +7,7 @@ import threading
 
 class Logs:
     
-    def generate_logs(self):
+    def __generate_logs(self):
         pass
 
     def run(self):
@@ -21,7 +21,7 @@ class HTTP_logs(Logs):
         pass
 
 
-    def generate_logs(self):
+    def __generate_logs(self):
         """Function to generate request with random resources"""
         GET_resources = ["https://httpbin.org/get","https://picsum.photos/200/300", "https://jsonplaceholder.typicode.com/posts", "https://postman-echo.com/get", "https://8.8.8.8" ]
         POST_resources = ["https://httpbin.org/post", "https://jsonplaceholder.typicode.com/posts"]
@@ -41,7 +41,7 @@ class ICMP_logs(Logs):
     def __init__(self):
         pass
 
-    def generate_logs(self):
+    def __generate_logs(self):
         """Function to generate request with random resources"""
 
         PING_resources = ["8.8.8.8", "1.0.0.1", "8.8.4.4", "cloudflare-dns.com", "google.com"]
